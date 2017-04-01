@@ -1,0 +1,2 @@
+version: ${spring-boot.version}
+author: ${info.author.username}

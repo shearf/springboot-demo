@@ -1,0 +1,20 @@
+server:
+  port: 8080
+
+info:
+  author:
+    username: xiahaihu
+    email: xiahaihu2009@gmail.com
+endpoints:
+  actuator:
+    sensitive: false
+    enabled: true
+
+spring:
+  devtools:
+    livereload:
+      enabled: true
+
+  main:
+    banner-mode: "off"
+

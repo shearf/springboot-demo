@@ -16,5 +16,37 @@ spring:
       enabled: true
 
   main:
-    banner-mode: "off"
+    banner-mode: "console"
+  profiles:
+    active: dev
+  config:
+    name: "custom"
+
+
+logging:
+#  file: application.log
+  level: warn
+  path: /data/logs/springboot-demo
+
+
+---
+spring:
+  profiles: dev
+
+http:
+  url: http://dev.localhost
+  address:
+    host: 127.0.0.1
+    port: 8020
+---
+spring:
+  profiles: test
+
+http:
+  url: http://dev.localhost
+  address:
+    host: 127.0.0.2
+    port: 8021
+
+
 

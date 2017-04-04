@@ -1,5 +1,6 @@
 package com.shearf.demo.springboot;
 
+import com.shearf.demo.springboot.bean.ConnectionProperties;
 import com.shearf.demo.springboot.config.HttpConfig;
 import org.junit.Assert;
 import org.junit.Test;
@@ -20,6 +21,8 @@ public class ProfileTests {
     @Value("${current.profile}")
     private String currentProfile;
 
+    private ConnectionProperties connectionProperties;
+
     @Value("${http.url}")
     private String httpUrl;
 
@@ -36,6 +39,11 @@ public class ProfileTests {
         System.out.println(httpConfig.getUrl());
 
         Assert.assertTrue(httpConfig.getUrl().equals("http://dev.localhost"));
+    }
+
+    @Test
+    public void getBeanValueTest() {
+
     }
 
 }

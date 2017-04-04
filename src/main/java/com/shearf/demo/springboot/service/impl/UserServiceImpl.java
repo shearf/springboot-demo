@@ -1,0 +1,24 @@
+package com.shearf.demo.springboot.service.impl;
+
+import com.shearf.demo.springboot.dal.mapper.UserMapper;
+import com.shearf.demo.springboot.domain.entity.User;
+import com.shearf.demo.springboot.service.UserService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import java.util.List;
+
+/**
+ * Created by xiahaihu2009@gmail on 2017/4/4.
+ */
+@Service
+public class UserServiceImpl implements UserService {
+
+    @Autowired
+    private UserMapper userMapper;
+
+    @Override
+    public List<User> listUsers() {
+        return userMapper.selectAll();
+    }
+}

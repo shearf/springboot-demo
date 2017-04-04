@@ -22,8 +22,8 @@ nbbuild/
 dist/
 nbdist/
 .nb-gradle/
-### Example user template template
-### Example user template
+### Example user templates templates
+### Example user templates
 
 # IntelliJ project files
 .idea

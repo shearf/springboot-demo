@@ -8,7 +8,6 @@ import java.util.List;
 /**
  * Created by xiahaihu2009@gmail on 2017/4/4.
  */
-@Repository
 public interface UserMapper {
     List<User> selectAll();
 }

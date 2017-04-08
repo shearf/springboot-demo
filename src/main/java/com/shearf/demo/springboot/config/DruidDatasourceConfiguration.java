@@ -1,10 +1,13 @@
 package com.shearf.demo.springboot.config;
 
 import com.alibaba.druid.pool.DruidDataSource;
+import org.apache.ibatis.session.SqlSessionFactory;
+import org.apache.ibatis.transaction.jdbc.JdbcTransactionFactory;
 import org.springframework.boot.bind.RelaxedPropertyResolver;
 import org.springframework.context.EnvironmentAware;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.PropertySource;
 import org.springframework.core.env.Environment;
 
 import javax.sql.DataSource;
@@ -14,13 +17,14 @@ import java.sql.SQLException;
  * Created by xiahaihu2009@gmail on 2017/4/5.
  */
 @Configuration
+@PropertySource("classpath:database.properties")
 public class DruidDatasourceConfiguration implements EnvironmentAware {
 
     private RelaxedPropertyResolver resolver;
 
     @Override
     public void setEnvironment(Environment environment) {
-        resolver = new RelaxedPropertyResolver(environment, "spring.datasource.");
+        resolver = new RelaxedPropertyResolver(environment, "database.");
     }
 
     @Bean

@@ -5,10 +5,7 @@ info:
   author:
     username: xiahaihu
     email: xiahaihu2009@gmail.com
-endpoints:
-  actuator:
-    sensitive: false
-    enabled: true
+
 
 spring:
   devtools:
@@ -48,25 +45,27 @@ spring:
 
 logging:
   file: application.log
-  level: warn
+  level: info
   path: /Users/xiahaihu/logs/springboot-demo
 
 security:
-  basic:
-    authorize-mode: authenticated
-    enabled: false
+#  basic:
+#    authorize-mode: authenticated
+#    enabled: false
   user:
     name: shearf
     password: shearf
-    role: user
-management:
-  security:
+endpoints:
+  beans:
+    sensitive: false
     enabled: true
-    roles: ADMIN
+  info:
+    path: /sys/info
+management:
+  context-path: /system
 #mybatis:
 #  mapper-locations: classpath:mappers/*.xml
 #  type-aliases-package: com.shearf.demo.springboot.domain.entity
-
 
 ---
 spring:

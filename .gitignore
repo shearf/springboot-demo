@@ -30,3 +30,4 @@ nbdist/
 *.iml
 out
 gen
+/application.log
